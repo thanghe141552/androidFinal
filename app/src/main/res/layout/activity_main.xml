@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.136" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgUser"
         android:layout_width="70dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +113,7 @@
         app:srcCompat="@drawable/thit_k_kh_ng_t_n__2__1" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imgBook"
         android:layout_width="70dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -181,7 +181,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imgBook"
         app:layout_constraintVertical_bias="0.04" />
 
     <TextView
@@ -197,7 +197,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imgUser"
         app:layout_constraintVertical_bias="0.04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
