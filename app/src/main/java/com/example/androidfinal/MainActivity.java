@@ -25,6 +25,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        imgUser = (ImageView) findViewById(R.id.imgUser);
+        imgUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListUserActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
