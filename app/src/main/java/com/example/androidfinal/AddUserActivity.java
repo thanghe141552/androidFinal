@@ -7,19 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ListUserActivity extends AppCompatActivity {
+public class AddUserActivity extends AppCompatActivity {
     private Button btnBack;
-    private Button btnAdd;
+    private Button btnSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_user);
+        setContentView(R.layout.activity_add_user);
 
-        getSupportActionBar().setTitle("List User");
+
+        getSupportActionBar().setTitle("Add User");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnBack = (Button) findViewById(R.id.buttonBackUser);
-        btnAdd = (Button) findViewById(R.id.buttonAddUser);
+        btnBack = (Button) findViewById(R.id.buttonBackCreateUser);
+        btnSave = (Button) findViewById(R.id.buttonSaveUser);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,16 +28,15 @@ public class ListUserActivity extends AppCompatActivity {
                 back(v);
             }
         });
-        btnAdd.setOnClickListener(new View.OnClickListener() {
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewAdd(v);
+//                viewAdd(v);
             }
         });
-
     }
     public void back(View view){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ListUserActivity.class);
         startActivity(intent);
     }
     public void viewAdd(View view){

@@ -31,7 +31,7 @@
         tools:listitem="@layout/list_item_user" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonAddUser"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Add user"
@@ -44,7 +44,7 @@
         android:background="@drawable/search_background"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonBackUser"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Back"
