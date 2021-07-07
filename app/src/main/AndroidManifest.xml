@@ -10,9 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
         <activity
-            android:name=".MainActivity2"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.AndroidFinal.NoActionBar"></activity>
+            android:name=".AddUserActivity"
+            android:parentActivityName=".ListUserActivity" />
+        <activity
+            android:name=".UpdateBookActivity"
+            android:parentActivityName=".ListBook" />
+        <activity
+            android:name=".DetailBookActivity"
+            android:parentActivityName=".ListBook" />
+        <activity
+            android:name=".AddBookActivity"
+            android:parentActivityName=".ListBook" />
+        <activity
+            android:name=".ListBook"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ListUserActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
