@@ -1,6 +1,7 @@
 package com.example.androidfinal.Model;
 
 public class User {
+    private int id;
     private String userName;
     private String phone;
     private String email;
@@ -10,12 +11,21 @@ public class User {
     public User() {
     }
 
-    public User(String userName, String phone, String email, String address, String image) {
+    public User(int id, String userName, String phone, String email, String address, String image) {
         this.userName = userName;
         this.phone = phone;
         this.email = email;
         this.address = address;
         this.image = image;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUserName() {

@@ -30,12 +30,12 @@ public class UserAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return userList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return userList.get(position);
     }
 
     @Override
@@ -50,20 +50,6 @@ public class UserAdapter extends BaseAdapter {
 
 
 
-//    @Override
-//    public int getCount() {
-//        return arrNguoiDung.size();
-//    }
-//
-//    @Override
-//    public Object getItem(int i) {
-//        return arrNguoiDung.get(i);
-//    }
-//
-//    @Override
-//    public long getItemId(int i) {
-//        return 0;
-//    }
 //
 //    public static class ViewHolder {
 //        ImageView img;
