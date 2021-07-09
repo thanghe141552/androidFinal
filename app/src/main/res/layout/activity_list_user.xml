@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listUser"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,27 +32,32 @@
 
     <Button
         android:id="@+id/buttonAddUser"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#FEADAD"
+
+        android:onClick="viewAdd"
         android:text="Add user"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957"
-        android:background="@drawable/search_background"/>
+        app:layout_constraintVertical_bias="0.957" />
 
     <Button
         android:id="@+id/buttonBackUser"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:backgroundTint="#FEADAD"
+        app:cornerRadius="20dp"
+        android:onClick="back"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957"
-        android:background="@drawable/search_background"/>
+        app:layout_constraintVertical_bias="0.957" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,13 +11,21 @@ public class User {
     public User() {
     }
 
-    public User(int id, String userName, String phone, String email, String address, String image) {
+    public User(String userName, String phone, String email, String address, String image) {
         this.userName = userName;
         this.phone = phone;
         this.email = email;
         this.address = address;
         this.image = image;
+    }
+
+    public User(int id, String userName, String phone, String email, String address, String image) {
         this.id = id;
+        this.userName = userName;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.image = image;
     }
 
     public int getId() {
@@ -70,12 +78,11 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                ", image='" + image + '\'' +
-                '}';
+        return
+                "" + userName + '\'' +
+                "" + phone + '\'' +
+                "" + email + '\'' +
+                "" + address + '\'' +
+                "" + image + '\'' ;
     }
 }

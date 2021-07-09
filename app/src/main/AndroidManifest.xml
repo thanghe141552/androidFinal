@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
         <activity
+            android:name=".DetailUserActivity"
+            android:parentActivityName=".ListUserActivity" />
+        <activity android:name=".EditUserActivity" />
+        <activity
             android:name=".AddUserActivity"
             android:parentActivityName=".ListUserActivity" />
         <activity
