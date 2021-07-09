@@ -16,7 +16,7 @@ public class UserDAO {
     private SQLiteDatabase db;
     private DatabaseHelper dbHelper;
     public static final String tableName = "User";
-    public static final String sql = "CREATE TABLE User (user_id int primary key autoincrement not null, " +
+    public static final String sql = "CREATE TABLE User (user_id integer primary key autoincrement not null, " +
             "fullname text, phone text, email text, address text, image text);";
 
     public UserDAO(Context context) {
@@ -24,7 +24,7 @@ public class UserDAO {
         db = dbHelper.getWritableDatabase();
     }
 
-    public int insert(User user) {
+    public boolean insert(User user) {
         ContentValues values = new ContentValues();
         values.put("fullname", user.getUserName());
         values.put("phone", user.getPhone());
@@ -32,13 +32,14 @@ public class UserDAO {
         values.put("address", user.getAddress());
         values.put("image", user.getImage());
         try {
-            if (db.insert(tableName, null, values) == -1) {
-                return -1;
+            long a = db.insert(tableName, null, values);
+            if (a == -1) {
+                return false;
             }
         } catch (Exception ex) {
             System.out.println(ex);
         }
-        return 1;
+        return true;
     }
 
     public List<User> getAll() {
@@ -66,9 +67,9 @@ public class UserDAO {
         if (result == 0)
             return -1;
         return 1;
-    }     //check login
+    }
 
-    public int update(User user) {
+    public boolean update(User user) {
         ContentValues values = new ContentValues();
         values.put("fullname", user.getUserName());
         values.put("phone", user.getPhone());
@@ -76,9 +77,9 @@ public class UserDAO {
         values.put("address", user.getAddress());
         values.put("image", user.getImage());
         int result = db.update(tableName, values, "user_id=?", new String[]{String.valueOf(user.getId())});
-        if (result == 0) {
-            return -1;
+        if (result < 0) {
+            return false;
         }
-        return 1;
+        return true;
     }
 }
