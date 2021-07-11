@@ -65,4 +65,10 @@ public class BookDAO {
         c.close();
         return listBook;
    }
+    public int delete(int book_id) {
+        int result = db.delete(TABLE_NAME, "code=?", new String[]{String.valueOf(book_id)});
+        if (result == 0)
+            return -1;
+        return 1;
+    }
 }

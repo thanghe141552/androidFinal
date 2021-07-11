@@ -73,14 +73,14 @@ private Activity context;
 
             holder.imgDelete = convertView.findViewById(R.id.btn_delete);
             holder.imgUpdate = convertView.findViewById(R.id.btn_update);
-//            holder.imgDelete.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    sachDAO.deleteSachByID(arrSach.get(position).getMaSach());
-//                    arrSach.remove(position);
-//                    notifyDataSetChanged();
-//                }
-//            });
+            holder.imgDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bookDAO.delete(listBook.get(position).getCode());
+                    listBook.remove(position);
+                    notifyDataSetChanged();
+                }
+            });
             convertView.setTag(holder);
         }else
             holder = (BookAdapter.ViewHolder) convertView.getTag();
