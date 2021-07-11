@@ -2,6 +2,7 @@ package com.example.androidfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import com.example.androidfinal.Model.Book;
 
 public class AddBookActivity extends AppCompatActivity {
     EditText txtCode,txtName,txtQuantity,txtCategory,txtPrice;
-    Button btn_add;
+    Button btn_add,btn_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class AddBookActivity extends AppCompatActivity {
         txtCategory = findViewById(R.id.txtCategory);
         txtPrice = findViewById(R.id.txtPrice);
         btn_add = findViewById(R.id.btn_add);
+        btn_back = findViewById(R.id.btnBackAddBook);
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +49,12 @@ public class AddBookActivity extends AppCompatActivity {
 //                }
             }
         });
-
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListBookActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
