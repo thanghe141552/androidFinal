@@ -35,7 +35,7 @@ public class ListUserActivity extends AppCompatActivity {
 
         btnBack = (Button) findViewById(R.id.buttonBackUser);
         btnAdd = (Button) findViewById(R.id.buttonAddUser);
-        listViewUser = (ListView) findViewById(R.id.listUser);
+        listViewUser = (ListView) findViewById(R.id.lv_book);
         searchView = (SearchView) findViewById(R.id.search_view);
         userDAO = new UserDAO(ListUserActivity.this);
         userList = userDAO.getAll();
