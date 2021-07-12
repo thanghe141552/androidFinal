@@ -24,7 +24,7 @@ public class AddBookActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Add Book");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        txtCode = findViewById(R.id.txtCode);
+
         txtName = findViewById(R.id.txtName);
         txtQuantity = findViewById(R.id.txtQuantity);
         txtCategory = findViewById(R.id.txtCategory);
@@ -35,7 +35,7 @@ public class AddBookActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 BookDAO bookDAO = new BookDAO(AddBookActivity.this);
-                Book book = new Book(Integer.parseInt(txtCode.getText().toString()) ,txtName.getText().toString(),Integer.parseInt(txtQuantity.getText().toString()),
+                Book book = new Book(txtName.getText().toString(),Integer.parseInt(txtQuantity.getText().toString()),
                         txtCategory.getText().toString(),Double.parseDouble(txtPrice.getText().toString()));
                 bookDAO.insertBook(book);
 //                try {

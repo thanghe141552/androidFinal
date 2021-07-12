@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.androidfinal.DB.DatabaseHelper;
 import com.example.androidfinal.Model.Book;
+import com.example.androidfinal.Model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class BookDAO {
     private DatabaseHelper dbHelper;
     private Context context;
     public static final String TABLE_NAME = "Book";
-    public static final String SQL_Book ="CREATE TABLE Book (code INTEGER primary key , book_name TEXT, " +
+    public static final String SQL_Book ="CREATE TABLE Book (code INTEGER primary key autoincrement , book_name TEXT, " +
             "quantity integer," +
             "category text, price double);";
     public BookDAO(Context context) {
@@ -27,13 +28,13 @@ public class BookDAO {
         db = dbHelper.getWritableDatabase();
     }
 
-    public void insertBook(Book s){
+    public void insertBook(Book book){
         ContentValues values = new ContentValues();
-        values.put("code",s.getCode());
-        values.put("book_name",s.getName());
-        values.put("quantity",s.getQuantity());
-        values.put("category",s.getCategory());
-        values.put("price",s.getPrice());
+
+        values.put("book_name",book.getName());
+        values.put("quantity",book.getQuantity());
+        values.put("category",book.getCategory());
+        values.put("price",book.getPrice());
 
         long result = db.insert(TABLE_NAME,null,values);
         if(result == -1){
@@ -70,5 +71,17 @@ public class BookDAO {
         if (result == 0)
             return -1;
         return 1;
+    }
+    public boolean update(Book book) {
+        ContentValues values = new ContentValues();
+        values.put("book_name",book.getName());
+        values.put("quantity",book.getQuantity());
+        values.put("category",book.getCategory());
+        values.put("price",book.getPrice());
+        int result = db.update(TABLE_NAME, values, "code=?", new String[]{String.valueOf(book.getCode())});
+        if (result < 0) {
+            return false;
+        }
+        return true;
     }
 }

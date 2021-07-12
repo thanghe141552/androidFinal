@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidfinal.DAO.BookDAO;
+import com.example.androidfinal.EditBookActivity;
 import com.example.androidfinal.ListBookActivity;
 import com.example.androidfinal.MainActivity;
 import com.example.androidfinal.Model.Book;
@@ -28,13 +30,14 @@ import java.util.List;
 
 public class BookAdapter extends BaseAdapter    {
 private Activity context;
-    List<Book> listBook;
+    private List<Book> listBook;
     public LayoutInflater inflater;
+    private Activity activity;
 
     BookDAO bookDAO;
     public BookAdapter(Activity context, List<Book> listBook) {
         super();
-        this.context = context;
+        this.activity = context;
         this.listBook = listBook;
         this.inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         bookDAO = new BookDAO(context);
@@ -82,6 +85,20 @@ private Activity context;
                 }
             });
             convertView.setTag(holder);
+            holder.imgUpdate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, EditBookActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("book_name",listBook.get(position).getName());
+                    bundle.putInt("quantity",listBook.get(position).getQuantity());
+                    bundle.putString("category",listBook.get(position).getCategory());
+                    bundle.putDouble("price",listBook.get(position).getPrice());
+                    bundle.putInt("code",listBook.get(position).getCode());
+                    intent.putExtras(bundle);
+                    activity.startActivity(intent);
+                }
+            });
         }else
             holder = (BookAdapter.ViewHolder) convertView.getTag();
             Book book = (Book) listBook.get(position);
