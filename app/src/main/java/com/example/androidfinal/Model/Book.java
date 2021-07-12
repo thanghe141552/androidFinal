@@ -10,14 +10,19 @@ public class Book {
     public Book() {
     }
 
-    public Book(int code, String name, int quantity, String category, double price) {
+    public Book(int code,String name, int quantity, String category, double price) {
         this.code = code;
         this.name = name;
         this.quantity = quantity;
         this.category = category;
         this.price = price;
     }
-
+    public Book(String name, int quantity, String category, double price) {
+        this.name = name;
+        this.quantity = quantity;
+        this.category = category;
+        this.price = price;
+    }
     public int getCode() {
         return code;
     }

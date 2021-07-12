@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -40,8 +41,20 @@ private Button btnBack;
         listBook = bookDAO.getListBook();
         bookAdapter = new BookAdapter( this,listBook);
         lvBook.setAdapter(bookAdapter);
+        lvBook.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ListBookActivity.this, DetailBookActivity.class);
+                Bundle b = new Bundle();
+                b.putString("book_name", listBook.get(position).getName());
+                b.putInt("quantity", listBook.get(position).getQuantity());
+                b.putString("category", listBook.get(position).getCategory());
+                b.putDouble("price", listBook.get(position).getPrice());
 
-
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
 
     }
     public void back(View view){

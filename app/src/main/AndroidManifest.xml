@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.AndroidFinal">
+        <activity android:name=".EditBookActivity"></activity>
         <activity
             android:name=".DetailUserActivity"
             android:parentActivityName=".ListUserActivity" />
@@ -26,9 +26,6 @@
         <activity
             android:name=".AddBookActivity"
             android:parentActivityName=".ListBookActivity" />
-
-
-
         <activity
             android:name=".ListBookActivity"
             android:parentActivityName=".MainActivity" />
