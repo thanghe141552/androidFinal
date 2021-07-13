@@ -1,12 +1,10 @@
 package com.example.androidfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -36,7 +34,7 @@ private Button btnBack;
 
         btnBack = (Button) findViewById(R.id.btnBack);
         btnAdd = (Button) findViewById(R.id.btnAdd);
-        lvBook =  (ListView) findViewById(R.id.lv_book);
+        lvBook =  (ListView) findViewById(R.id.lv_books);
         bookDAO = new BookDAO(ListBookActivity.this);
         listBook = bookDAO.getListBook();
         bookAdapter = new BookAdapter( this,listBook);
@@ -45,14 +43,16 @@ private Button btnBack;
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ListBookActivity.this, DetailBookActivity.class);
-                Bundle b = new Bundle();
-                b.putString("book_name", listBook.get(position).getName());
-                b.putInt("quantity", listBook.get(position).getQuantity());
-                b.putString("category", listBook.get(position).getCategory());
-                b.putDouble("price", listBook.get(position).getPrice());
+                Bundle bundle = new Bundle();
+                bundle.putString("book_name",listBook.get(position).getName());
+                bundle.putInt("quantity",listBook.get(position).getQuantity());
+                bundle.putString("category",listBook.get(position).getCategory());
+                bundle.putDouble("price",listBook.get(position).getPrice());
+                bundle.putInt("code",listBook.get(position).getCode());
 
-                intent.putExtras(b);
+                intent.putExtras(bundle);
                 startActivity(intent);
+
             }
         });
 

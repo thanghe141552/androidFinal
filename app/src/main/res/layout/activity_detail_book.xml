@@ -4,6 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAF3D1"
     tools:context=".DetailBookActivity">
+
+    <EditText
+        android:id="@+id/txt_detail_price"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="340dp"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Price"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_detail_name"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="132dp"
+        android:autoText="false"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_detail_category"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="272dp"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Category
+"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_detail_quantity"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:clickable="false"
+        android:editable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Quantity
+"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

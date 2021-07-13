@@ -74,7 +74,7 @@ private Activity context;
             holder.txtBookName = convertView.findViewById(R.id.txt_name);
             holder.txtBookCategory = convertView.findViewById(R.id.txt_category);
 
-            holder.imgDelete = convertView.findViewById(R.id.btn_delete);
+            holder.imgDelete = convertView.findViewById(R.id.delete_btn);
             holder.imgUpdate = convertView.findViewById(R.id.btn_update);
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -97,6 +97,7 @@ private Activity context;
                     bundle.putInt("code",listBook.get(position).getCode());
                     intent.putExtras(bundle);
                     activity.startActivity(intent);
+
                 }
             });
         }else

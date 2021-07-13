@@ -16,9 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.androidfinal.DAO.UserDAO;
-import com.example.androidfinal.DetailUserActivity;
 import com.example.androidfinal.EditUserActivity;
-import com.example.androidfinal.ListUserActivity;
 import com.example.androidfinal.Model.User;
 import com.example.androidfinal.R;
 
@@ -105,7 +103,7 @@ public class UserAdapter extends BaseAdapter implements Filterable {
             holder.imgUser = (ImageView) convertView.findViewById(R.id.imageUser);
             holder.txtName = (TextView) convertView.findViewById(R.id.userName);
             holder.txtPhone = (TextView) convertView.findViewById(R.id.userPhone);
-            holder.imgDelete = (ImageView) convertView.findViewById(R.id.imageDelete);
+            holder.imgDelete = (ImageView) convertView.findViewById(R.id.btn_delete);
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

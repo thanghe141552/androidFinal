@@ -61,7 +61,7 @@
                         android:src="@drawable/edit_user" />
 
                     <ImageView
-                        android:id="@+id/imageDelete"
+                        android:id="@+id/btn_delete"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="50dp"
