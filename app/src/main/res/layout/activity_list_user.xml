@@ -32,25 +32,13 @@
 
     <Button
         android:id="@+id/buttonAddUser"
-<<<<<<< Updated upstream
-        android:layout_width="128dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#FEADAD"
-
         android:onClick="viewAdd"
-        android:text="Add user"
-        app:cornerRadius="20dp"
-=======
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonbackground"
         android:text="Add user"
         android:textColor="@color/black"
         app:cornerRadius="@dimen/cornerbutton3"
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
@@ -61,18 +49,9 @@
     <Button
         android:id="@+id/buttonBackUser"
         android:layout_width="120dp"
-<<<<<<< Updated upstream
-        android:layout_height="55dp"
-        android:backgroundTint="#FEADAD"
-        app:cornerRadius="20dp"
         android:onClick="back"
-=======
         android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonbackground"
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         android:text="Back"
         android:textColor="@color/black"
         app:cornerRadius="@dimen/fab_margin"
