@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private ImageView imgBook;
     private ImageView imgUser;
+    private ImageView imgCate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ListUserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgCate = (ImageView) findViewById(R.id.imgCategory);
+        imgCate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListCategoryActivity.class);
                 startActivity(intent);
             }
         });

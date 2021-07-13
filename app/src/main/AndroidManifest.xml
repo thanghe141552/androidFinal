@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androidfinal">
 
     <application
@@ -9,11 +10,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
+<<<<<<< Updated upstream
         <activity android:name=".EditBookActivity"></activity>
         <activity
             android:name=".DetailUserActivity"
             android:parentActivityName=".ListUserActivity" />
         <activity android:name=".EditUserActivity" />
+=======
+        <activity android:name=".StaticActivity"></activity>
+        <activity android:name=".UpdateCategoryActivity" />
+        <activity android:name=".AddCategoryActivity" />
+        <activity android:name=".ListCategoryActivity" />
+        <activity
+            android:name=".BeginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+>>>>>>> Stashed changes
         <activity
             android:name=".AddUserActivity"
             android:parentActivityName=".ListUserActivity" />
@@ -32,13 +48,13 @@
         <activity
             android:name=".ListUserActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".BeginActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

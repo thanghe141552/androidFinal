@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">AndroidFinal</string>
+    <string name="nameHint">Name</string>
+    <string name="locationHint">Location</string>
+    <string name="descriptionHint">Description</string>
 
     <style name="GreenText" parent="android:Theme.Material">
         <item name="android:colorPrimary">#dc4646</item>

@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,6 +20,10 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
                 android:src="@drawable/example_user_pic" />
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             <LinearLayout
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
@@ -30,7 +35,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
+<<<<<<< Updated upstream
                     android:text="Nam Doan abc xyz"
+=======
+                    android:text="Nam Doan"
+>>>>>>> Stashed changes
                     android:textColor="@color/black"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -44,12 +53,14 @@
                     android:textSize="22sp"
                     android:textStyle="normal" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="24dp"
                 android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">

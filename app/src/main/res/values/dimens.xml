@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="cornerbutton">10dp</dimen>
+    <dimen name="cornerbutton2" />
+    <dimen name="cornerbutton3">15dp</dimen>
+    <dimen name="cornerbutton4">20dp</dimen>
 </resources>
