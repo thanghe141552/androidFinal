@@ -10,14 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
-<<<<<<< Updated upstream
+
         <activity android:name=".EditBookActivity"></activity>
         <activity
             android:name=".DetailUserActivity"
             android:parentActivityName=".ListUserActivity" />
         <activity android:name=".EditUserActivity" />
-=======
-        <activity android:name=".StaticActivity"></activity>
+
+        <activity android:name=".StaticActivity"/>
         <activity android:name=".UpdateCategoryActivity" />
         <activity android:name=".AddCategoryActivity" />
         <activity android:name=".ListCategoryActivity" />
@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
->>>>>>> Stashed changes
+
         <activity
             android:name=".AddUserActivity"
             android:parentActivityName=".ListUserActivity" />

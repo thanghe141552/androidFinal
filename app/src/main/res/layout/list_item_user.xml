@@ -21,6 +21,10 @@
                 android:layout_marginStart="20dp"
                 android:src="@drawable/example_user_pic" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -36,8 +40,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     android:text="Nam Doan abc xyz"
 =======
+=======
+>>>>>>> Stashed changes
                     android:text="Nam Doan"
 >>>>>>> Stashed changes
                     android:textColor="@color/black"
