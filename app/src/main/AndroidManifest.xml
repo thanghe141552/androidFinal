@@ -9,20 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
+        <activity android:name=".EditBookActivity"></activity>
+        <activity
+            android:name=".DetailUserActivity"
+            android:parentActivityName=".ListUserActivity" />
+        <activity android:name=".EditUserActivity" />
         <activity
             android:name=".AddUserActivity"
             android:parentActivityName=".ListUserActivity" />
         <activity
             android:name=".UpdateBookActivity"
-            android:parentActivityName=".ListBook" />
+            android:parentActivityName=".ListBookActivity" />
         <activity
             android:name=".DetailBookActivity"
-            android:parentActivityName=".ListBook" />
+            android:parentActivityName=".ListBookActivity" />
         <activity
             android:name=".AddBookActivity"
-            android:parentActivityName=".ListBook" />
+            android:parentActivityName=".ListBookActivity" />
         <activity
-            android:name=".ListBook"
+            android:name=".ListBookActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ListUserActivity"

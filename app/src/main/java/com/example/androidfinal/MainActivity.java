@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         imgBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ListBook.class);
+                Intent intent = new Intent(getApplicationContext(), ListBookActivity.class);
                 startActivity(intent);
             }
         });
