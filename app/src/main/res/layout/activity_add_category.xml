@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listbackground"
+    tools:context=".AddCategoryActivity">
+
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/buttonbackground"
+        android:fontFamily="@font/ruluko"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="@dimen/cornerbutton4"
+        app:layout_constraintBottom_toBottomOf="@+id/backbutton"
+        app:layout_constraintEnd_toStartOf="@+id/backbutton"
+        app:layout_constraintTop_toTopOf="@+id/backbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/buttonbackground"
+        android:fontFamily="@font/ruluko"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="@dimen/cornerbutton4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:fontFamily="@font/ruluko"
+        android:hint="@string/nameHint"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:fontFamily="@font/ruluko"
+        android:hint="@string/locationHint"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:fontFamily="@font/ruluko"
+        android:hint="@string/descriptionHint"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+</androidx.constraintlayout.widget.ConstraintLayout>

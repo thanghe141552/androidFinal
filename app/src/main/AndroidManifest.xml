@@ -10,25 +10,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
+        <activity android:name=".EditCategoryActivity"></activity>
 
-        <activity android:name=".EditBookActivity"></activity>
+        <activity android:name=".EditBookActivity" />
         <activity
             android:name=".DetailUserActivity"
             android:parentActivityName=".ListUserActivity" />
         <activity android:name=".EditUserActivity" />
 
-        <activity android:name=".StaticActivity"/>
         <activity android:name=".UpdateCategoryActivity" />
-        <activity android:name=".AddCategoryActivity" />
-        <activity android:name=".ListCategoryActivity" />
-        <activity
-            android:name=".BeginActivity">
+
+
+        <activity android:name=".BeginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".StaticActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DetailCategoryActivity"
+            android:parentActivityName=".ListCategoryActivity"/>
+        <activity
+            android:name=".AddCategoryActivity"
+            android:parentActivityName=".ListCategoryActivity"/>
+        <activity android:name=".ListCategoryActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".AddUserActivity"
             android:parentActivityName=".ListUserActivity" />
@@ -49,7 +58,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:parentActivityName=".BeginActivity"/>
+            android:parentActivityName=".BeginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

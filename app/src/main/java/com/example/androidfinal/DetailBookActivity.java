@@ -11,7 +11,6 @@ import com.example.androidfinal.DAO.BookDAO;
 
 public class DetailBookActivity extends AppCompatActivity {
     private TextView txtName , txtCategory,txtQuantity,txtPrice;
-    private Button btnBack;
     private BookDAO bookDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

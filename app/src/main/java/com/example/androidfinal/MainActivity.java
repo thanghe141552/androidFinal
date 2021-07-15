@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgBook;
     private ImageView imgUser;
     private ImageView imgCate;
+    private ImageView imgStatistic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        imgStatistic = (ImageView) findViewById(R.id.imgStatistic);
+        imgStatistic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), StaticActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
