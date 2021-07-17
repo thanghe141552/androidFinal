@@ -12,7 +12,7 @@
         android:theme="@style/Theme.AndroidFinal">
 
         <activity android:name=".EditCategoryActivity"></activity>
-        <activity android:name=".BillActivity"></activity>
+        <activity android:name=".AddBillActivity"></activity>
 
         <activity android:name=".EditBookActivity" />
         <activity
