@@ -19,13 +19,15 @@
         app:srcCompat="@drawable/photo_static" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/tv_totalUser"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Total user subcribe: 120"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
+        android:editable="false"
+        android:focusable="false"
+        android:text="Total user"
+        app:layout_constraintBottom_toTopOf="@+id/tv_totalCategory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,45 +35,68 @@
         app:layout_constraintVertical_bias="0.961" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/tv_totalCategory"
         android:layout_width="370dp"
         android:layout_height="49dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Total category of book: 12"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName10"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName8"
+        android:editable="false"
+        android:focusable="false"
+        android:text="Total category "
+        app:layout_constraintBottom_toTopOf="@+id/tv_totalBook"
+        app:layout_constraintEnd_toEndOf="@+id/tv_totalUser"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName8"
+        app:layout_constraintStart_toStartOf="@+id/tv_totalUser"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/tv_totalBook"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Best book seller : Sach1"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName11"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName9"
+        android:editable="false"
+        android:focusable="false"
+        android:text="Total of book"
+        app:layout_constraintBottom_toTopOf="@+id/tv_bestseller"
+        app:layout_constraintEnd_toEndOf="@+id/tv_totalCategory"
         app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
+        app:layout_constraintStart_toStartOf="@+id/tv_totalCategory"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.958" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/tv_bestseller"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Total money earn : 41000$"
+        android:editable="false"
+        android:focusable="false"
+        android:text="Best seller"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName10"
+        app:layout_constraintEnd_toEndOf="@+id/tv_totalBook"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName10"
+        app:layout_constraintStart_toStartOf="@+id/tv_totalBook"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.517" />
+
+    <EditText
+        android:id="@+id/tv_totalmoney"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:text="Total money"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_bestseller"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_bestseller"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bestseller"
+        app:layout_constraintVertical_bias="0.03" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
