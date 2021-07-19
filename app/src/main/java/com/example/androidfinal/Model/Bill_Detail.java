@@ -3,19 +3,27 @@ package com.example.androidfinal.Model;
 import java.util.Date;
 
 public class Bill_Detail {
+    private int bill_detail_id;
     private int bill_id;
     private int quantity;
-    private Bill bill;
-    private Book book;
+    private int book_id;
 
     public Bill_Detail() {
     }
 
-    public Bill_Detail(int bill_id, int quantity, Bill bill, Book book) {
+    public Bill_Detail(int bill_detail_id, int bill_id, int quantity, int book_id) {
+        this.bill_detail_id = bill_detail_id;
         this.bill_id = bill_id;
         this.quantity = quantity;
-        this.bill = bill;
-        this.book = book;
+        this.book_id = book_id;
+    }
+
+    public int getBill_detail_id() {
+        return bill_detail_id;
+    }
+
+    public void setBill_detail_id(int bill_detail_id) {
+        this.bill_detail_id = bill_detail_id;
     }
 
     public int getBill_id() {
@@ -34,19 +42,11 @@ public class Bill_Detail {
         this.quantity = quantity;
     }
 
-    public Bill getBill() {
-        return bill;
+    public int getBook_id() {
+        return book_id;
     }
 
-    public void setBill(Bill bill) {
-        this.bill = bill;
-    }
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBook_id(int book_id) {
+        this.book_id = book_id;
     }
 }

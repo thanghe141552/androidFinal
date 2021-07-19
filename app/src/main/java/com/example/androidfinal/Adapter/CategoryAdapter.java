@@ -12,9 +12,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.example.androidfinal.DAO.CategoryDAO;
 import com.example.androidfinal.EditCategoryActivity;
 import com.example.androidfinal.Model.Category;
+import com.example.androidfinal.Model.User;
 import com.example.androidfinal.R;
 
 import java.util.List;

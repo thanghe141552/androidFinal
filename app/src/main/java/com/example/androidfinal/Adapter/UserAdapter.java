@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import java.util.List;
 
 public class UserAdapter extends BaseAdapter implements Filterable {
     List<User> userList;
-    List<User> userListBeforeFilter;
+    List<User> userListAfterFilter;
     public Activity activity;
     public LayoutInflater inflater;
     UserDAO userDAO;
@@ -34,7 +35,7 @@ public class UserAdapter extends BaseAdapter implements Filterable {
         super();
         this.activity = context;
         this.userList = userList;
-        this.userListBeforeFilter = userList;
+        this.userListAfterFilter = new ArrayList<>(userList);
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         userDAO = new UserDAO(context);
     }
@@ -56,35 +57,35 @@ public class UserAdapter extends BaseAdapter implements Filterable {
 
     @Override
     public Filter getFilter() {
-        return new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                String search = constraint.toString();
-                if(search.isEmpty()){
-                    userList = userListBeforeFilter;
-                }else{
-                    List<User> userFilter = new ArrayList<>();
-                    for (User u: userListBeforeFilter) {
-                        if(u.getUserName().toLowerCase().contains(search)){
-                            userFilter.add(u);
-                        }
-                    }
-                    userList = userFilter;
-                }
-
-                FilterResults filterResults = new FilterResults();
-                filterResults.values = userList;
-                return filterResults;
-            }
-
-            @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-                userList = (List<User>) results.values;
-                notifyDataSetChanged();
-            }
-        };
+        return filterUser;
     }
+    Filter filterUser = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<User> userListSearch = new ArrayList<>();
+            if (constraint == null || constraint.length() == 0) {
+                userListSearch.addAll(userListAfterFilter);
+            } else {
+                String stringSearch = constraint.toString().toLowerCase().trim();
+                for (User u : userListAfterFilter) {
+                    if (u.getUserName().toLowerCase().contains(stringSearch)) {
+                        userListSearch.add(u);
+                    }
+                }
+            }
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = userListSearch;
+            Log.i("Gggggggg", "performFiltering: "+userListSearch.size());
+            return filterResults;
+        }
 
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            userList.clear();
+            userList = (List) results.values;
+            notifyDataSetChanged();
+        }
+    };
 
     public static class ViewHolder {
         ImageView imgUser;

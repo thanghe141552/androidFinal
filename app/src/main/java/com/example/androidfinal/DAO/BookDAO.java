@@ -37,11 +37,10 @@ public class BookDAO {
         values.put("price",book.getPrice());
 
         long result = db.insert(TABLE_NAME,null,values);
-        if(result == -1){
+        if(result < 0 ){
             Toast.makeText(context,"Fail",Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(context,"Add successfully",Toast.LENGTH_SHORT).show();
-
         }
 
     }

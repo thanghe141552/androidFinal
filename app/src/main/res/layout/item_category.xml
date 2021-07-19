@@ -3,20 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <TextView
-        android:id="@+id/txt_dropdown_user"
+        android:id="@+id/txt_dropdown_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="abc"
         android:textColor="@color/black"
-        android:textSize="16dp" />
+        android:textSize="18dp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
-
-
 </LinearLayout>

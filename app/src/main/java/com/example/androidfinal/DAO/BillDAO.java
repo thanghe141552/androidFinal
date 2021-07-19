@@ -21,7 +21,8 @@ public class BillDAO {
     private DatabaseHelper dbHelper;
     private Context context;
     public static final String TABLE_NAME = "Bill";
-    public static final String SQL_Book ="CREATE TABLE Bill (bill_id INTEGER primary key autoincrement , date date" ;
+    public static final String SQL_Book ="CREATE TABLE Bill (bill_id INTEGER primary key autoincrement , date date, user_id INTEGER" +
+            ", total_price number, paid boolean" ;
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     public BillDAO(Context context) {
         dbHelper = new DatabaseHelper(context);
@@ -32,7 +33,9 @@ public class BillDAO {
         ContentValues values = new ContentValues();
         values.put("bill_id",b.getBill_id());
         values.put("date",sdf.format(b.getDate()));
-
+        values.put("user_id",b.getUser_id());
+        values.put("total_price",b.getTotal_price());
+        values.put("paid",b.isPaid());
         long result = db.insert(TABLE_NAME,null,values);
         if(result == -1){
             Toast.makeText(context,"Fail",Toast.LENGTH_SHORT).show();
@@ -50,8 +53,12 @@ public class BillDAO {
             Bill bill = new Bill();
             bill.setBill_id(c.getInt(0));
             bill.setDate(sdf.parse(c.getString(1)));
+            bill.setUser_id(c.getInt(2));
+            bill.setTotal_price(c.getDouble(3));
+            if(c.getInt(4)>0){
+                bill.setPaid(true);
+            }else bill.setPaid(false);
             listBill.add(bill);
-
             c.moveToNext();
         }
         c.close();
@@ -61,6 +68,15 @@ public class BillDAO {
         ContentValues values = new ContentValues();
         values.put("bill_id",b.getBill_id());
         values.put("date",b.getDate().toString());
+        int result = db.update(TABLE_NAME,values,"bill_id=?", new String[]{String.valueOf(b.getBill_id())});
+        if (result == 0){
+            return -1;
+        }
+        return 1;
+    }
+    public int updateStatusPaidBill(Bill b){
+        ContentValues values = new ContentValues();
+        values.put("paid",b.isPaid());
         int result = db.update(TABLE_NAME,values,"bill_id=?", new String[]{String.valueOf(b.getBill_id())});
         if (result == 0){
             return -1;

@@ -10,10 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
-        <activity android:name=".DetailBillActivity"></activity>
+        <activity android:name=".DetailBillActivity"/>
         <activity android:name=".ListBillActivity" />
         <activity android:name=".EditCategoryActivity" />
         <activity android:name=".AddBillActivity" />
+
         <activity android:name=".EditBookActivity" />
         <activity
             android:name=".DetailUserActivity"
@@ -56,10 +57,13 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ListUserActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".BeginActivity" />
+
+
 
         <meta-data
             android:name="preloaded_fonts"
