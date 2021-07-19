@@ -9,33 +9,33 @@
 
     <Button
         android:id="@+id/btnBackAddBook"
-        android:layout_width="128dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#FEADAD"
-
-
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonbackground"
         android:text="Back"
-        app:cornerRadius="20dp"
+        android:textColor="@color/black"
+        app:cornerRadius="@dimen/cornerbutton3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.881" />
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_width="128dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#FEADAD"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonbackground"
         android:text="Create"
-        app:cornerRadius="20dp"
+        android:textColor="@color/black"
+        app:cornerRadius="@dimen/cornerbutton3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
+        app:layout_constraintVertical_bias="0.881" />
 
     <EditText
         android:id="@+id/txtName"

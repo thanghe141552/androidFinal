@@ -10,5 +10,9 @@ public class StaticActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_static);
+
+        getSupportActionBar().setTitle("Statistic");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }

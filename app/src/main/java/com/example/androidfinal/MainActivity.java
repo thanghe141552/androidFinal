@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imgUser;
     private ImageView imgCate;
     private ImageView imgStatistic;
-    private ImageView   imgBill;
+    private ImageView imgBill;
+    private ImageView imgExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), StaticActivity.class);
                 startActivity(intent);
+            }
+        });
+        imgExit = (ImageView) findViewById(R.id.imgExit);
+        imgExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
             }
         });
     }

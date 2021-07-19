@@ -56,6 +56,9 @@ public class AddBillActivity extends AppCompatActivity implements DatePickerDial
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Add Bill");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_add_bill);
         txtDate = findViewById(R.id.txt_add_date);
         txtBillCode = findViewById(R.id.billCode);
@@ -110,7 +113,10 @@ public class AddBillActivity extends AppCompatActivity implements DatePickerDial
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                int quantity = Integer.parseInt(s+"");
+                int quantity = 0;
+                if(s.length()!=0){
+                    quantity = Integer.parseInt(s+"");
+                }
                 double price = quantity * book.getPrice();
                 txtTotalPrice.setText(price+"");
             }

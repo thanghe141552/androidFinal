@@ -14,24 +14,23 @@
         android:layout_height="561dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.264"
         tools:listitem="@layout/list_item_category">
 
     </ListView>
 
     <Button
         android:id="@+id/cateBackbutton"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:cornerRadius="@dimen/cornerbutton3"
         android:backgroundTint="@color/buttonbackground"
-        android:fontFamily="@font/ruluko"
-        android:text="Back"
-        android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        app:cornerRadius="@dimen/cornerbutton4"
+        android:text="BACK"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/cateAddbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.826"
@@ -41,19 +40,17 @@
 
     <Button
         android:id="@+id/cateAddbutton"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/buttonbackground"
-        android:fontFamily="@font/ruluko"
-        android:text="Add"
+        android:text="ADD BOOK"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        app:cornerRadius="@dimen/cornerbutton4"
+        app:cornerRadius="@dimen/cornerbutton3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cateBackbutton"
-        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintVertical_bias="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

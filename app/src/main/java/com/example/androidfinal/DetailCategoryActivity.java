@@ -13,7 +13,6 @@ import com.example.androidfinal.DAO.CategoryDAO;
 public class DetailCategoryActivity extends AppCompatActivity {
 
     private TextView dtName, dtLocation, dtDescription;
-    private Button backbutton;
     private CategoryDAO categoryDAO;
 
     @Override
@@ -33,13 +32,5 @@ public class DetailCategoryActivity extends AppCompatActivity {
         dtLocation.setText(b.getString("catLoc"));
         dtDescription.setText(b.getString("catDes"));
 
-        backbutton = findViewById(R.id.buttonback);
-        backbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ListCategoryActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

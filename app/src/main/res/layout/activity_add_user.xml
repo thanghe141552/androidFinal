@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Phone number"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -78,32 +78,34 @@
     <Button
         android:id="@+id/buttonEditUser"
         android:layout_width="120dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#FEADAD"
-        app:cornerRadius="20dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonbackground"
         android:onClick="insert"
         android:text="Save"
+        android:textColor="@color/black"
+        app:cornerRadius="@dimen/cornerbutton3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintVertical_bias="0.926" />
 
     <Button
         android:id="@+id/buttonBackCreateUser"
         android:layout_width="120dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#FEADAD"
-        app:cornerRadius="20dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonbackground"
+        android:textColor="@color/black"
+        app:cornerRadius="@dimen/cornerbutton3"
         android:onClick="back"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintVertical_bias="0.926" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

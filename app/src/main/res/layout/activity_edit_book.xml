@@ -61,25 +61,30 @@
 
     <Button
         android:id="@+id/btn_upd_back"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="@color/buttonbackground"
         android:text="back"
+        android:textColor="@color/black"
+        app:cornerRadius="@dimen/cornerbutton3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <Button
         android:id="@+id/btn_update_book"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="@color/buttonbackground"
+        app:cornerRadius="@dimen/cornerbutton3"
+        android:textColor="@color/black"
         android:text="Update"
-        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_upd_back"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.66" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

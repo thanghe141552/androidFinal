@@ -7,24 +7,6 @@
     android:background="@color/listbackground"
     tools:context=".DetailCategoryActivity">
 
-    <Button
-        android:id="@+id/buttonback"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/buttonbackground"
-        android:fontFamily="@font/ruluko"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:cornerRadius="@dimen/cornerbutton4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
-
     <EditText
         android:id="@+id/dt_name"
         android:layout_width="303dp"
