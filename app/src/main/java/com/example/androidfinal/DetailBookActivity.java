@@ -8,10 +8,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.androidfinal.DAO.BookDAO;
+import com.example.androidfinal.Model.Bill;
 
 public class DetailBookActivity extends AppCompatActivity {
     private TextView txtName , txtCategory,txtQuantity,txtPrice;
     private BookDAO bookDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

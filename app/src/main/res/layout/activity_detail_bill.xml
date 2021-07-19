@@ -8,12 +8,13 @@
     tools:context=".EditBookActivity">
 
     <EditText
-        android:id="@+id/txt_bill_book_code"
+        android:id="@+id/txt_bill_detail_code"
         android:layout_width="288dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Book Code"
+        android:focusable="false"
+        android:hint="Bill Code"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -21,43 +22,93 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txt_bill_quantity"
+        android:id="@+id/txt_bill_detail_username"
         android:layout_width="288dp"
         android:layout_height="50dp"
-        android:layout_marginTop="104dp"
+
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Quantity"
+        android:focusable="false"
+        android:hint="Username"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_code" />
 
+    <EditText
+        android:id="@+id/txt_bill_detail_quantity"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        android:hint="Quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_book_name" />
+
+    <EditText
+        android:id="@+id/txt_bill_detail_date"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        android:hint="Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_quantity" />
+
+    <EditText
+        android:id="@+id/txt_bill_detail_total_price"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        android:hint="total price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_date" />
+
+    <EditText
+        android:id="@+id/txt_bill_detail_paid"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        android:hint="Paid ?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_total_price" />
 
     <Button
         android:id="@+id/btn_add_bill_detail_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="120dp"
         android:text="back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
-
-    <Button
-        android:id="@+id/btn_add_bill_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:text="Add"
-        app:cornerRadius="10dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_add_bill_detail_back"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_paid"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <EditText
+        android:id="@+id/txt_bill_detail_book_name"
+        android:layout_width="288dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Book Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill_detail_username" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

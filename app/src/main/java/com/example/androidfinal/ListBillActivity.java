@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -13,6 +14,7 @@ import com.example.androidfinal.DAO.BillDAO;
 import com.example.androidfinal.Model.Bill;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class ListBillActivity extends AppCompatActivity {
@@ -34,6 +36,7 @@ public class ListBillActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_bill_back);
         listViewBill = findViewById(R.id.lv_bill);
         billDAO = new BillDAO(ListBillActivity.this);
+
         try {
             bills = billDAO.getAllBill();
         } catch (ParseException e) {
@@ -41,6 +44,23 @@ public class ListBillActivity extends AppCompatActivity {
         }
         billAdapter = new BillAdapter(ListBillActivity.this,bills );
         listViewBill.setAdapter(billAdapter);
+        listViewBill.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ListBillActivity.this, DetailBillActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("bill_id",bills.get(position).getBill_id());
+                bundle.putString("date", bills.get(position).getDate().toString());
+                bundle.putString("user_name",bills.get(position).getUser_name());
+                bundle.putInt("quantity",bills.get(position).getQuantity());
+                bundle.putString("book_name",bills.get(position).getBook_name());
+                bundle.putDouble("total_price",bills.get(position).getTotal_price());
+                bundle.putBoolean("paid",bills.get(position).isPaid());
+
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

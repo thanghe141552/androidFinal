@@ -10,6 +10,7 @@ public class Bill {
     private String book_name;
     private double total_price;
     private boolean paid;
+
     public Bill() {
     }
 
