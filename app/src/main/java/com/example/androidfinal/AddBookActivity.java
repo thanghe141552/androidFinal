@@ -5,19 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.androidfinal.Adapter.BillAdapter;
-import com.example.androidfinal.Adapter.CategoryAdapter;
 import com.example.androidfinal.Adapter.CategoryDropdownAdapter;
 import com.example.androidfinal.DAO.BookDAO;
 import com.example.androidfinal.DAO.CategoryDAO;
-import com.example.androidfinal.DB.DatabaseHelper;
 import com.example.androidfinal.Model.Book;
 import com.example.androidfinal.Model.Category;
 

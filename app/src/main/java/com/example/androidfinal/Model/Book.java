@@ -1,11 +1,11 @@
 package com.example.androidfinal.Model;
 
 public class Book {
-    int code;
-    String name;
-    int quantity;
-    String category;
-    double price;
+    private int code;
+    private String name;
+    private int quantity;
+    private String category;
+    private double price;
 
     public Book() {
     }

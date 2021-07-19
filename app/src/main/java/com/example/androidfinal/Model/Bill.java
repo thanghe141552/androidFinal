@@ -5,17 +5,20 @@ import java.util.Date;
 public class Bill {
     private int bill_id;
     private Date date;
-    private int user_id;
+    private String user_name;
+    private int quantity;
+    private String book_name;
     private double total_price;
     private boolean paid;
     public Bill() {
     }
 
-
-    public Bill(int bill_id, Date date, int user_id, double total_price, boolean paid) {
+    public Bill(int bill_id, Date date, String user_name, int quantity, String book_name, double total_price, boolean paid) {
         this.bill_id = bill_id;
         this.date = date;
-        this.user_id = user_id;
+        this.user_name = user_name;
+        this.quantity = quantity;
+        this.book_name = book_name;
         this.total_price = total_price;
         this.paid = paid;
     }
@@ -36,12 +39,28 @@ public class Bill {
         this.date = date;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getBook_name() {
+        return book_name;
+    }
+
+    public void setBook_name(String book_name) {
+        this.book_name = book_name;
     }
 
     public double getTotal_price() {

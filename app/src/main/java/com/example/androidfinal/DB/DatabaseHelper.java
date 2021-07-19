@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.androidfinal.DAO.BillDAO;
 import com.example.androidfinal.DAO.BookDAO;
 import com.example.androidfinal.DAO.CategoryDAO;
 import com.example.androidfinal.DAO.UserDAO;
@@ -23,6 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(UserDAO.sql);
         db.execSQL(BookDAO.SQL_Book);
         db.execSQL(CategoryDAO.createTableStatement);
+        db.execSQL(BillDAO.SQL_Bill);
     }
 
     @Override
@@ -30,6 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists "+UserDAO.tableName);
         db.execSQL("Drop table if exists "+BookDAO.TABLE_NAME);
         db.execSQL("Drop table if exists "+CategoryDAO.CATEGORY_TABLE);
+        db.execSQL("Drop table if exists "+BillDAO.TABLE_NAME);
         onCreate(db);
     }
 }

@@ -27,11 +27,11 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/bill_id"
+                    android:id="@+id/bill_user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:text="1"
+                    android:text="Thang"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     android:textStyle="normal"/>
@@ -58,10 +58,10 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/btn_bill_update"
+                        android:id="@+id/btn_bill_update_paid"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/edit_user" />
+                        android:src="@drawable/bill_paid_pic" />
 
                     <ImageView
                         android:id="@+id/btn_bill_delete"

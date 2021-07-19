@@ -21,8 +21,8 @@ public class BillDAO {
     private DatabaseHelper dbHelper;
     private Context context;
     public static final String TABLE_NAME = "Bill";
-    public static final String SQL_Book ="CREATE TABLE Bill (bill_id INTEGER primary key autoincrement , date date, user_id INTEGER" +
-            ", total_price number, paid boolean" ;
+    public static final String SQL_Bill ="CREATE TABLE Bill (bill_id INTEGER primary key autoincrement , date date, user_name text" +
+            ", quantity number, book_name text, total_price number, paid boolean);" ;
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     public BillDAO(Context context) {
         dbHelper = new DatabaseHelper(context);
@@ -33,7 +33,9 @@ public class BillDAO {
         ContentValues values = new ContentValues();
         values.put("bill_id",b.getBill_id());
         values.put("date",sdf.format(b.getDate()));
-        values.put("user_id",b.getUser_id());
+        values.put("user_name",b.getUser_name());
+        values.put("quantity",b.getQuantity());
+        values.put("book_name",b.getBook_name());
         values.put("total_price",b.getTotal_price());
         values.put("paid",b.isPaid());
         long result = db.insert(TABLE_NAME,null,values);
@@ -53,9 +55,11 @@ public class BillDAO {
             Bill bill = new Bill();
             bill.setBill_id(c.getInt(0));
             bill.setDate(sdf.parse(c.getString(1)));
-            bill.setUser_id(c.getInt(2));
-            bill.setTotal_price(c.getDouble(3));
-            if(c.getInt(4)>0){
+            bill.setUser_name(c.getString(2));
+            bill.setQuantity(c.getInt(3));
+            bill.setBook_name(c.getString(4));
+            bill.setTotal_price(c.getDouble(5));
+            if(c.getInt(6)>0){
                 bill.setPaid(true);
             }else bill.setPaid(false);
             listBill.add(bill);
@@ -64,16 +68,16 @@ public class BillDAO {
         c.close();
         return listBill;
     }
-    public int updateBill(Bill b){
-        ContentValues values = new ContentValues();
-        values.put("bill_id",b.getBill_id());
-        values.put("date",b.getDate().toString());
-        int result = db.update(TABLE_NAME,values,"bill_id=?", new String[]{String.valueOf(b.getBill_id())});
-        if (result == 0){
-            return -1;
-        }
-        return 1;
-    }
+//    public int updateBill(Bill b){
+//        ContentValues values = new ContentValues();
+//        values.put("bill_id",b.getBill_id());
+//        values.put("date",b.getDate().toString());
+//        int result = db.update(TABLE_NAME,values,"bill_id=?", new String[]{String.valueOf(b.getBill_id())});
+//        if (result == 0){
+//            return -1;
+//        }
+//        return 1;
+//    }
     public int updateStatusPaidBill(Bill b){
         ContentValues values = new ContentValues();
         values.put("paid",b.isPaid());
