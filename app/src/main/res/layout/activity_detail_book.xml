@@ -12,7 +12,6 @@
         android:layout_width="288dp"
         android:layout_height="50dp"
         android:layout_marginTop="340dp"
-        android:editable="false"
         android:ems="10"
         android:focusable="false"
         android:hint="Price"

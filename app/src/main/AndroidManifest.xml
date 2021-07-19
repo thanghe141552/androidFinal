@@ -10,36 +10,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFinal">
-
-        <activity android:name=".EditCategoryActivity"></activity>
-        <activity android:name=".AddBillActivity"></activity>
-
+        <activity android:name=".DetailBillActivity"></activity>
+        <activity android:name=".ListBillActivity" />
+        <activity android:name=".EditCategoryActivity" />
+        <activity android:name=".AddBillActivity" />
         <activity android:name=".EditBookActivity" />
         <activity
             android:name=".DetailUserActivity"
             android:parentActivityName=".ListUserActivity" />
         <activity android:name=".EditUserActivity" />
-
         <activity android:name=".UpdateCategoryActivity" />
-
-
         <activity android:name=".BeginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".StaticActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".DetailCategoryActivity"
-            android:parentActivityName=".ListCategoryActivity"/>
+            android:parentActivityName=".ListCategoryActivity" />
         <activity
             android:name=".AddCategoryActivity"
-            android:parentActivityName=".ListCategoryActivity"/>
-        <activity android:name=".ListCategoryActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".ListCategoryActivity" />
+        <activity
+            android:name=".ListCategoryActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddUserActivity"
             android:parentActivityName=".ListUserActivity" />

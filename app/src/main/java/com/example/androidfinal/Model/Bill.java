@@ -5,19 +5,16 @@ import java.util.Date;
 public class Bill {
     private int bill_id;
     private Date date;
-    private User user_id;
+    private String name_user;
     private double total_price;
     private boolean paid;
-
     public Bill() {
     }
 
-    public Bill(int bill_id, Date date, User user_id, double total_price, boolean paid) {
+    public Bill(int bill_id, Date date, String name_user) {
         this.bill_id = bill_id;
         this.date = date;
-        this.user_id = user_id;
-        this.total_price = total_price;
-        this.paid = paid;
+        this.name_user = name_user;
     }
 
     public int getBill_id() {
@@ -36,12 +33,12 @@ public class Bill {
         this.date = date;
     }
 
-    public User getUser_id() {
-        return user_id;
+    public String getName_user() {
+        return name_user;
     }
 
-    public void setUser_id(User user_id) {
-        this.user_id = user_id;
+    public void setName_user(String name_user) {
+        this.name_user = name_user;
     }
 
     public double getTotal_price() {

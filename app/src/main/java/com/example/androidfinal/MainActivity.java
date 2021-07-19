@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         imgBill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AddBillActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ListBillActivity.class);
                 startActivity(intent);
             }
         });

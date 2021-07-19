@@ -17,15 +17,47 @@
         android:layout_margin="30dp"
         android:background="@android:color/transparent" />
 
-    <EditText
-        android:id="@+id/txt_create_bill_name"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginLeft="30dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <EditText
+            android:id="@+id/txt_add_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DD-MM-YYYY"
 
-        android:hint="Name"
-        android:inputType="textPersonName"
+            android:layout_weight="4"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/picDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pick"
+            android:onClick="datePicker"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Create Bill"
+            android:onClick="AddBill"/>
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show list bill"/>
+    </LinearLayout>
 
-        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
