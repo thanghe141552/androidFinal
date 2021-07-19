@@ -1,12 +1,16 @@
 package com.example.androidfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -61,6 +65,10 @@ public class AddBillActivity extends AppCompatActivity implements DatePickerDial
         txtTotalPrice = findViewById(R.id.total_money);
         userDropdownAdapter = new UserDropdownAdapter(this, R.layout.item_user_selecteed, getListUser());
 
+        ActivityCompat.requestPermissions(AddBillActivity.this,new String[]{Manifest.permission.SEND_SMS,
+                Manifest.permission.READ_SMS}, PackageManager.PERMISSION_GRANTED);
+
+
         btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +86,6 @@ public class AddBillActivity extends AppCompatActivity implements DatePickerDial
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -164,6 +171,11 @@ public class AddBillActivity extends AppCompatActivity implements DatePickerDial
                     Toast.makeText(getApplicationContext(), "Add successful", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AddBillActivity.this,ListBillActivity.class);
                     startActivity(intent);
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage(user.getPhone(),null,"You have paid : "+Double.parseDouble(String.valueOf(txtTotalPrice.getText()))
+                            +" for "+Integer.parseInt(txtQuantity.getText().toString())+" book name "+book.getName() ,
+                            null,null );
+                    
                 } else {
                     Toast.makeText(getApplicationContext(), "Add Failed", Toast.LENGTH_SHORT).show();
                 }
